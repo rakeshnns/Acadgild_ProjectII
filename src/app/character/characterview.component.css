@@ -1,0 +1,25 @@
+.card {
+
+    width: 1000px;
+    height: 500px;
+    margin: 10px;
+    border: 3px solid #73AD21; 
+    background-color: rgb(48, 48, 107);
+}
+
+.card-img-top {
+
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 300px;
+    height: 480px;
+}
+
+.card-block {
+    float: left;
+    width: 650px;
+    height: 450px;
+}
+
+

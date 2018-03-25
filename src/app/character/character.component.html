@@ -1,0 +1,61 @@
+<h1 class="display-3 mb-5" style="text-align:center">
+  {{title}}
+</h1>
+<form class="my-5">
+  <div class="form-group">
+      <label for="filterInput">Search Filter</label>
+      <input type="text" class="form-control" id="filterInput" name="filter" [(ngModel)]="filter" (ngModelChange)="refreshList($event)" />
+  </div>
+  <div class="form-group">
+      <label for="totalOutput">Total Matches</label>
+      <input type="number" id="totalOutput" class="form-control" name="total" [(ngModel)]="total" disabled="disabled" />
+  </div>
+  <div class="form-group">
+      <label for="countInput">Items Shown</label>
+      <select class="form-control" id="countInput" name="count" [(ngModel)]="shown" (ngModelChange)="refreshList($event)">
+          <option *ngFor="let i of [5, 10, 20,100]">
+              {{i}}
+          </option>
+      </select>
+  </div>
+</form>
+<div style="display: inline-block">
+<div class="card-columns my-5">
+  <div *ngFor="let character of characters" class="card">
+      <img class="card-img-top img-fluid" src="{{character.thumbnail.path}}.{{character.thumbnail.extension}}" alt="Card image cap">
+
+      <div class="card-block" style="overflow:hidden ">
+          <h4 class="card-title">{{character.name}}</h4>
+          <p class="card-text">{{character.description}}</p>
+          <p class="card-text">{{character.id}}</p>
+      </div>
+      <div class="bottomtag">
+        <button (click)= "characterView(character.id)"  style="background: linear-gradient(to bottom, rgba(247, 242, 242, 0.692), rgba(255,0,0,1));border-radius: 8px;color: white">
+            View Details</button>
+        <a href="#">
+            <span class="glyphicon glyphicon-tag"></span>
+          </a>
+         <span style="margin-left: 70px;">
+            <a target="_blank" title="find us on Facebook" href="http://www.facebook.com/PLACEHOLDER">
+                <img alt="follow me on facebook" src="//login.create.net/images/icons/user/facebook_40x40.png"  width="20px" height="20px" border=0>
+            </a>
+            <a target="_blank" title="follow me on twitter" href="http://www.twitter.com/PLACEHOLDER">
+                <img alt="follow me on twitter" src="//login.create.net/images/icons/user/twitter_30x30.png"  width="20px" height="20px"  border=0>
+            </a>
+            <a target="_blank" title="follow me on instagram" href="http://www.instagram.com/PLACEHOLDER">
+                <img alt="follow me on instagram" src="https://c866088.ssl.cf3.rackcdn.com/assets/instagram30x30.png"  width="20px" height="20px"   border=0>
+            </a>
+          </span>
+        </div>
+  </div>
+</div>
+</div>
+
+<div class="Footer">
+    <footer>
+      <blockquote class="blockquote">
+          <p class="mb-0" [innerHTML]="attribution"></p>
+      </blockquote>
+    </footer>
+</div>
+

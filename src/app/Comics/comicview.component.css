@@ -1,0 +1,43 @@
+.card {
+
+    width: 1000px;
+    height: 600px;
+    margin: 10px;
+    border: 3px solid #73AD21; 
+    background-color: rgb(48, 48, 107);
+}
+
+.card-img-top {
+
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 300px;
+    height: 580px;
+}
+
+.card-img-top1 {
+
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 55px;
+    height: 55px;
+}
+
+.card-txt-top {
+
+    margin: 8px;
+    color:lightgray;
+    float: left;
+    width: 50px;
+    height: 50px;
+}
+
+.card-block {
+    float: left;
+    width: 650px;
+    height: 550px;
+}
+
+

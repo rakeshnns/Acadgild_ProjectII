@@ -1,0 +1,27 @@
+<h1 style="text-align: center">Comics</h1>
+
+
+<div style="display: inline-block">
+        <div class="card-columns my-5">
+          <div *ngFor="let characterci of charactersci" class="card">
+
+              <img class="card-img-top img-fluid" src="{{characterci.thumbnail.path}}.{{characterci.thumbnail.extension}}" alt="Card image cap">
+        
+              <div class="card-block">
+                  <h2 class="card-title" style="color:white">{{characterci.title}}</h2>
+                  <p class="card-text"  style="color:lightgrey">{{characterci.description}}</p>
+              </div>
+              
+
+            </div>
+        </div>
+</div> 
+        
+        <div class="Footer">
+            <footer>
+              <blockquote class="blockquote">
+                  <p class="mb-0" [innerHTML]="attribution"></p>
+              </blockquote>
+            </footer>
+        </div>
+

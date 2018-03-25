@@ -1,0 +1,50 @@
+.card {
+    float: left;
+    width: 360px;
+    height: 350px;
+    margin: 10px;
+    border: 3px solid #73AD21; 
+    background-color: rgb(48, 48, 107);
+}
+
+.card-img-top {
+
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+    height: 300px;
+}
+
+.card-block {
+    float: left;
+    width: 160px;
+    height: 310px;
+}
+
+.Footer {
+    display: block;
+}
+
+.card-title {
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+.card-text {
+    color: cornsilk;
+}
+
+button {
+    display: inline-block;
+    margin-left: 5px;
+    width: 180px;
+    height: 25px;
+}
+
+
+table, th, td {
+    border: 1px solid cornsilk;
+    color: cornsilk;
+    padding: 5px;
+}

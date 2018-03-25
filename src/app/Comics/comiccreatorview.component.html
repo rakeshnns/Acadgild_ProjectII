@@ -1,0 +1,68 @@
+<h1 style="text-align: center">Creative Team</h1>
+<!--<div  *ngFor="let creator of comicscreator">
+  <P class="card-text"  style="color:lightgrey">{{char.name}}</P> 
+  Name:<p>{{creator.fullName}}</p> 
+  <img class="card-img-top img-fluid" src="{{creator.thumbnail.path}}.{{creator.thumbnail.extension}}" alt="Card image cap">
+  Series:<p>{{creator.series.available}}</p> 
+  Stories:<p>{{creator.stories.available}}</p> 
+  Comic:<p>{{creator.comics.available}}</p> 
+  Events:<p>{{creator.events.available}}</p> 
+  <p>***************************************************</p> 
+ </div> -->
+
+ <div style="display: inline-block">
+  <div class="card-columns my-5">
+    <div *ngFor="let creator of comicscreator" class="card">
+        <img class="card-img-top img-fluid" src="{{creator.thumbnail.path}}.{{creator.thumbnail.extension}}" alt="Card image cap">
+  
+        <div class="card-block" style="overflow:hidden ">
+            <h4 class="card-title">{{creator.fullName}}</h4>
+            <br>
+            <h4 style="color: white"><u>Score Card</u></h4>
+   
+            <table>
+            <tr>
+              <td>Series</td>
+              <td>{{creator.series.available}}</td>
+            </tr>
+            <tr>
+              <td>Stories</td>
+              <td>{{creator.stories.available}}</td>
+            </tr>
+            <tr>
+              <td>Comics</td>
+              <td>{{creator.comics.available}}</td>
+            </tr>
+            <tr>
+              <td>Events</td>
+              <td>{{creator.events.available}}</td>
+            </tr>
+          </table>
+        </div>
+        <div class="bottomtag">
+          <a href="#">
+              <span class="glyphicon glyphicon-tag"></span>
+            </a>
+           <span style="margin-left: 100px;">
+              <a target="_blank" title="find us on Facebook" href="http://www.facebook.com/PLACEHOLDER">
+                  <img alt="follow me on facebook" src="//login.create.net/images/icons/user/facebook_40x40.png"  width="20px" height="20px" border=0>
+              </a>
+              <a target="_blank" title="follow me on twitter" href="http://www.twitter.com/PLACEHOLDER">
+                  <img alt="follow me on twitter" src="//login.create.net/images/icons/user/twitter_30x30.png"  width="20px" height="20px"  border=0>
+              </a>
+              <a target="_blank" title="follow me on instagram" href="http://www.instagram.com/PLACEHOLDER">
+                  <img alt="follow me on instagram" src="https://c866088.ssl.cf3.rackcdn.com/assets/instagram30x30.png"  width="20px" height="20px"   border=0>
+              </a>
+            </span>
+          </div>
+    </div>
+  </div>
+  </div>
+  
+  <div class="Footer">
+      <footer>
+        <blockquote class="blockquote">
+            <p class="mb-0" [innerHTML]="attribution"></p>
+        </blockquote>
+      </footer>
+  </div>
